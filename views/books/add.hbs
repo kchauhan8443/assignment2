@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+{{!-- TODO: ADD FIELDS TO ENTER DATA AND A SAVE BUTTON --}}
+{{!-- Create a form to send information back to the server via POST --}}
+<form method="POST">
+    <fieldset>
+        <label for="name" class="col-2">Name:</label>
+        <input name="name" id="name"/>
+    </fieldset>
+    <fieldset>
+        <label for="auhtor" class="col-2">Author</label>
+        <input name="author" id="author"/>
+    </fieldset>
+    <fieldset>
+        <label for="price" class="col-2">Price</label>
+        <input name="price" id="price">
+    </fieldset>
+    <fieldset>
+        <label for="availability" class="col-2">Availability</label>
+        {{!-- <input name="availability" id="availability"> --}}
+        <select name="availability" id="availability">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+    </fieldset>
+    
+    <button class="offset-3 btn btn-primary">Save</button>
+</form>

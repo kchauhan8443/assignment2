@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+{{#if user}}
+    <a href="/books/add">Add a new Book</a>
+{{/if}}
+<table class="table">
+    <thead>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Availability</th>
+        <th></th>
+    </thead>
+    {{#each dataset}}
+    <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.author}}</td>
+        <td>{{this.price}}</td>
+        <td>{{this.availability}}</td>
+        {{#if ../user}}
+            <td>
+                <a href="/books/edit/{{this._id}}" class="btn btn-primary">Edit</a>
+                <a href="/books/delete/{{this._id}}" 
+                    class="btn btn-danger"
+                    onclick="return confirmDeletion();">Delete</a>
+            </td>
+        {{/if}}
+    </tr>
+    {{/each}}
+</table>

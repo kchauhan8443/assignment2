@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+<form method="POST">
+    <fieldset>
+        <label for="name" class="col-2">Name:</label>
+        <input name="name" id="name" value="{{book.name}}"/>
+    </fieldset>
+    <fieldset>
+        <label for="author" class="col-2">Auhtor:</label>
+        <input name="author" id="author" value="{{book.author}}"/>
+    </fieldset>
+    <fieldset>
+        <label for="price" class="col-2">Price:</label>
+        <input name="price" id="price" value="{{book.price}}"/>
+    </fieldset>
+    <fieldset>
+        <label for="availability" class="col-2">Availability</label>
+        {{!-- <input name="availability" id="availability"> --}}
+        <select name="availability" id="availability">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+    </fieldset>
+    <button class="offset-3 btn btn-primary">Save</button>
+</form>
